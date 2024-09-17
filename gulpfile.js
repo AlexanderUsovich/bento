@@ -35,7 +35,7 @@ function fonts() {
 }
 
 function images(){
-  return src(['app/images/src/*.*', '!app/images/src/*.svg'], {allowEmpty: true})
+  return src(['app/images/src/*.*', '!app/images/src/*.svg'])
     .pipe(newer('app/images'))
     .pipe(avif({ quality : 50}))
 
@@ -47,20 +47,20 @@ function images(){
     .pipe(newer('app/images'))
     .pipe(imagemin())
 
-    .pipe(dest('app/images'))
+    .pipe(dest('app/images/dest'))
 }
 
 function sprite () {
-  return src('app/images/*.svg')
+  return src('app/images/src/*.svg')
     .pipe(svgSprite({
       mode: {
         stack: {
           sprite: '../sprite.svg',
-          example: true 
+          example: true
         }
       }
     }))
-    .pipe(dest('app/images'))
+    .pipe(dest('app/images/dest'))
 }
 
 function scripts() {
@@ -74,13 +74,11 @@ function scripts() {
 }
 
 function styles() {
-  return src('app/scss/style.+(scss|sass|css)')
+  return src('app/scss/style.scss')
     .pipe(autoprefixer({ 
-      overrideBrowserslist: ['last 10 version'],
-      grid: true
-    }))
-    .pipe(concat('style.min.css'))
+      overrideBrowserslist: ['last 10 version']}))
     .pipe(scss({ outputStyle: 'compressed' }))
+    .pipe(concat('style.min.css'))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
@@ -89,11 +87,11 @@ function watching() {
   browserSync.init({
     server: {
       baseDir: "app/"
-    },
-    notify: false
+    }
   });
-  watch(['app/scss/style.+(scss|sass|css)'], styles)
-  watch(['app/images/src'], images)
+  watch(['app/scss/**/*.scss'], styles)
+  watch(['app/images/src/*.*', '!app/images/src/*.svg'], images)
+  watch(['app/images/src/*.svg'], sprite)
   watch(['app/js/main.js'], scripts)
   watch(['app/components/*', 'app/pages/*'], pages)
   watch(['app/*.html']).on('change', browserSync.reload);
@@ -101,20 +99,21 @@ function watching() {
 
 
 function cleanDist() {
-  return src('dist', {allowEmpty: true})
-    .pipe(clean())
+  return src('dist', {allowEmpty: true}).pipe(clean())
 }
 
 function building() {
   return src([
+    'app/**/*.html',
+    '!app/components/*',
+    '!app/pages/index.html',
     'app/css/style.min.css',
     '!app/images/**/*.html',
-    'app/images/*.*',
-    '!app/images/*.svg',
-    'app/images/sprite.svg',
+    'app/images/**/*.*',
+    '!app/images/**/*.svg',
+    'app/images/dest/sprite.svg',
     'app/fonts/*.*',
-    'app/js/main.min.js',
-    'app/**/*.html'
+    'app/js/main.min.js'
   ], 
     {base : 'app'}
   )
@@ -131,4 +130,4 @@ exports.scripts = scripts;
 exports.watching = watching;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, images, scripts, pages, watching);
+exports.default = parallel(styles, images, sprite, scripts, pages, watching);

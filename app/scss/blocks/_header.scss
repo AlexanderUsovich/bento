@@ -1,7 +1,7 @@
 .header{
   padding: 50px 0;
   &__inner{
-	@include flex;
+	  @include flex;
 	  align-items: center;
     flex-wrap: wrap;
   }

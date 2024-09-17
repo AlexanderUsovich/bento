@@ -15,19 +15,23 @@
     .container{
         max-width: 960px;
     }
-}
-
-@media (max-width: 920px) {
     .header{
+        &__inner{
+            justify-content: flex-end;
+        }
         &__logo{
             order: 0;
+            margin-right: auto;
         }
         &__btn{
-            margin-right: auto;
-            order: 2;
+            order: 1;
+            margin-right: 0;
+            margin-left: 150px;
+            margin-top: 20px;
         }
         &__menu{
-            order: 1;
+            order: 0;
+
         }
     }
 }
@@ -42,6 +46,21 @@
     .container{
         max-width: 540px;
     }
+    .header{
+        &__logo{
+            svg{
+              width: 250px;  
+            }
+        }
+        &__btn{
+            margin-left: auto;
+        }
+    }
+    .btn{
+        padding: 18px 50px;
+        font-size: 18px;
+    }
+
 }
 
 @media (max-width: 320px) {
