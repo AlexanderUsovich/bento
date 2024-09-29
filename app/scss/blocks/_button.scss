@@ -1,10 +1,13 @@
 .btn{
     border-radius: 30px;
     background: rgb(255, 255, 255);
-    padding: 18px 65px;
+    padding: 18px;
+    text-align: center;
     color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
     text-transform: uppercase;
+    width: 100%;
+    max-width: 380px;
 }

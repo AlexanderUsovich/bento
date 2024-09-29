@@ -1,70 +1,241 @@
-@media (max-width: 1400px) {
-    .container{
-        max-width: 1320px;
-    }
+@media (min-width: 1200px) {
+
 }
-@media (max-width: 1200px) {
-    .header{
-        &__btn{
-            margin-right: auto;
-        }
-    }
+@media (max-width: 1199px) {
+	.container{
+		max-width: 960px;
+	}
+	.header{
+		&__btn{
+			margin-right: auto;
+		}
+	}
+	.top{
+		&__inner{
+			grid-template-columns: 315px minmax(auto, 605px);
+			grid-template-rows: 225px 395px;
+		}
+		&__about {
+			// background-position: center;
+			grid-template-columns: 316px minmax(auto, 613px);
+		}
+		&__slogan {
+			width: 500px;
+		}
+		&__slogan-title {
+			font-size: 48px;
+			line-height: 1.1;
+		}
+		&__info-img {
+			margin-top: 40px;
+		}
+		&__promo{
+			padding-top: 110px;
+		}
+		&__promo-title{
+			font-size: 18px;
+		}
+		&__promo-text{
+			margin-top: 10px;
+		}
+		&__promo-img {
+			width: 60%;
+			margin-top: 10px;
+		}
+		&__promo-btn{
+			margin-top: 10px;
+		}
+	}
 }
 
-@media (max-width: 992px) {
-    .container{
-        max-width: 960px;
-    }
-    .header{
-        &__inner{
-            justify-content: flex-end;
-        }
-        &__logo{
-            order: 0;
-            margin-right: auto;
-        }
-        &__btn{
-            order: 1;
-            margin-right: 0;
-            margin-left: 150px;
-            margin-top: 20px;
-        }
-        &__menu{
-            order: 0;
+@media (max-width: 991px) {
+	.container{
+		max-width: 720px;
+	}
+	.header{
+		&__inner{
+			justify-content: flex-end;
+		}
+		&__logo{
+			order: 0;
+			margin-right: auto;
+		}
+		&__btn{
+			order: 1;
+			margin-right: 0;
+			margin-left: 150px;
+			margin-top: 20px;
+		}
+		&__menu{
+			order: 0;
+		}
+	}
 
-        }
-    }
+	.top{
+		&__inner{
+			grid-template-columns: 278px 403px;
+			grid-template-rows: 200px 350px;
+		}
+		&__about{
+			padding-top: 50px;
+			grid-template-columns: 278px 403px;
+			gap: 0px 20px;
+		}
+		&__slogan{
+			width: 330px;
+			&-title{
+				font-size: 50px;
+				line-height: 1;
+			}
+		}
+		&__info-img {
+			margin-top: 60px;
+		}
+		&__promo{
+			padding-top: 100px;
+			&-title{
+				font-size: 17px;
+			}
+			&-text{
+				margin-top: 5px;
+				font-size: 15px;
+			}
+			&-img {
+				width: 60%;
+				margin-top: 5px;
+			}
+			&-btn{
+				margin-top: 5px;
+				width: 245px;
+				font-size: 14px;
+				padding: 10px 0;
+			}
+		}
+		
+	}
+
+	.footer{
+		&__contacts{
+			gap: 4px 20px;
+		}
+		&__bottom{
+			grid-template-columns: 1fr;
+			gap: 10px;
+		}
+		&__btn{
+			justify-self: end;
+		}
+	}
 }
 
-@media (max-width: 768px) {
-    .container{
-        max-width: 720px;
-    }
+@media (max-width: 767px) {
+	.container{
+		max-width: 540px;
+	}
+	.top {
+		&__inner {
+			display: block;
+		}
+		&__about{
+			padding: 20px;
+			background-image: none;
+			background-color: #8F7E70;
+			display: block;
+			text-align: center;
+		}
+		&__slogan{
+			width: auto;
+			&-title{
+				font-size: 48px;
+				line-height: 1.2;
+			}
+		}
+		&__promo{
+			margin-top: 50px;
+			padding: 20px;
+			padding-top: 35px;
+			border-radius: 30px;
+			background-image: none;
+			background-color: #3C342E;
+			&-title{
+				font-size: 30px;
+				line-height: 1.2;
+			}
+			&-text{
+				margin-top: 25px;
+				font-size: 18px;
+				line-height: 1.2;
+			}
+			&-img {
+				width: 80%;
+				margin-top: 15px;
+			}
+			&-btn{
+				margin-top: 15px;
+				width: 350px;
+				font-size: 18px;
+				padding: 13px 0;
+			}
+		}
+	}
+	.statistics{
+		&__list{
+			flex-wrap: wrap;
+		}
+		&__item{
+			flex-basis: 100%;
+		}
+	}
 }
 
-@media (max-width: 576px) {
-    .container{
-        max-width: 540px;
-    }
-    .header{
-        &__logo{
-            svg{
-              width: 250px;  
-            }
-        }
-        &__btn{
-            margin-left: auto;
-        }
-    }
-    .btn{
-        padding: 18px 50px;
-        font-size: 18px;
-    }
+@media (max-width: 575px) {
+	.container{
+		max-width: 100%;
+	}
+	.header{
+		&__logo{
+			svg{
+			  width: 250px;  
+			}
+		}
+		&__btn{
+			margin-left: auto;
+		}
+	}
+	.btn{
+		padding: 18px 50px;
+		font-size: 18px;
+	}
+
+	.top{
+		&__promo{
+			&-btn{
+				max-width: 350px;
+				width: 100%;
+			}
+		}
+	}
+
+	.footer{
+		&__inner{
+			padding: 25px 13px 20px;
+		}
+		&__contacts{
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
+		&__logo svg {
+			width: 250px;
+		}
+		&__btn{
+			justify-self: center;
+		}
+	}
 
 }
 
 @media (max-width: 320px) {
-    .container{
-        width: auto;
-    }
+	.container{
+		width: auto;
+	}
 }
