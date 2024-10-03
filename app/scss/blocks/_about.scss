@@ -26,7 +26,7 @@
         margin-top: 30px;
     }
     &__bottom{
-        background: url('../images/about-bg.png') no-repeat right/cover;
+        background: url('../images/about-bg.png') no-repeat top/contain;
         height: 137px;
     }
 }

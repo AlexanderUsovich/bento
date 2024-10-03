@@ -3,7 +3,7 @@
     margin-bottom: 75px;
     &__inner {
         padding: 160px 85px 0 50px;
-        background: url('../images/projects-bg.webp') no-repeat;
+        background: url('../images/projects-bg.webp') no-repeat top/contain;
     }
     &__title {
         font-size: 20px;
@@ -15,7 +15,7 @@
         margin-top: -90px;
     }
     &__slide {
-        padding-bottom: 7px;
+        padding-bottom: 12px;
     }
     &__slide-title {
         font-size: 40px;
@@ -75,9 +75,6 @@
         margin-top: 50px;
     }
     &__slide-btn{
-        &::after{
-            display: none;
-        }
         background-color: #8F7E70;
         width: 68px;
         height: 40px;
@@ -86,7 +83,10 @@
         justify-content: center;
         align-items: center;
         top: auto;
-        bottom: 0px;
+        bottom: 4px;
+        &::after{
+            display: none;
+        }
         svg{
             width: 20px;
         }
@@ -98,7 +98,7 @@ sup{
 }
 
 .swiper-button-prev{
-    left: 436px;
+    left: 385px;
     transform: rotate(-2deg);
 }
 .swiper-button-next{
