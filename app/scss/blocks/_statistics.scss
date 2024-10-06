@@ -1,0 +1,26 @@
+.statistics {
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 19px;
+        // flex-wrap: wrap;
+    }
+    &__item {
+        border-radius: 30px;
+        background: rgb(181, 163, 149);
+        // flex-basis: 387px;
+        flex-basis: 33.333333%;
+        padding: 16px 38px;
+        text-align: center;
+        line-height: 1.2
+    }
+    &__num {
+        font-size: 96px;
+        font-weight: 700;
+    }
+    &__text {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}

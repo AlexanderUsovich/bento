@@ -98,6 +98,7 @@ header,
 hgroup,
 menu,
 nav,
+picture,
 section {
   display: block;
 }
@@ -127,6 +128,11 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+picture,
+img {
+  width: 100%;
 }
 
 /* reset end */

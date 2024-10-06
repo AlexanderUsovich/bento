@@ -1,0 +1,91 @@
+.top {
+    margin-bottom: 50px;
+    &__inner {
+        display: grid;
+        grid-template-columns: 387px minmax(auto, 793px);
+        grid-template-rows: 262px 488px;
+        gap: 0px 20px;
+    }
+    &__about {
+        padding: 50px 0 30px;
+        background: url('../images/top-about-bg.avif') no-repeat 0px 0px/cover;
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        display: grid;
+        grid-template-columns: 387px minmax(auto, 793px);
+        grid-template-rows: 260px 420px;
+        border-radius: 30px;
+        gap: 20px;
+    }
+    &__info {
+        padding-top: 15px;
+        text-align: center;
+        max-width: 210px;
+        margin: 0 auto;
+    }
+    &__info-title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+    &__info-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        margin-top: 10px;
+    }
+    &__slogan {
+        max-width: 630px;
+        justify-self: center;
+    }
+    &__slogan-title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 77px;
+        text-align: center;
+    }
+
+    &__info-img {
+        margin-top: 15px;
+    }
+    &__promo {
+        background: url('../images/promo-bg.png') no-repeat 0px 0px/cover;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding-top: 132px;
+        text-align: center;
+    }
+    &__promo-title {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+    &__promo-text {
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    &__promo-img {
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    &__promo-btn {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 15px;
+        border-radius: 30px;
+        background: rgb(0, 0, 0);
+        width: 280px;
+        padding: 13px 0;
+    }
+}
