@@ -5,6 +5,15 @@
 	  align-items: center;
     flex-wrap: wrap;
   }
+  &__logo{
+    fill: #fff;
+    transition: .3s;
+    svg{
+      &:hover{
+        fill: #CCC1B4;
+      }
+    }
+  }
   &__btn{
     margin-left: auto;
     margin-right: 160px;

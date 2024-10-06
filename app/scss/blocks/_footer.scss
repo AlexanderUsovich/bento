@@ -28,6 +28,10 @@
 	}
 	&__logo {
 		align-self: center;
+		svg{
+			fill: #000;
+			transition: .3s;
+		}
 	}
 	&__btn {
 		max-width: 380px;
