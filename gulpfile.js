@@ -51,7 +51,10 @@ function images(){
 }
 
 function sprite () {
-  return src('app/images/**/*.svg')
+  return src([
+    'app/images/**/*.svg', 
+    '!app/images/src/**/*.svg'
+  ])
     .pipe(svgSprite({
       mode: {
         symbol: {
@@ -111,7 +114,9 @@ function building() {
     'app/css/style.min.css',
     'app/**/*.html',
     '!app/images/stack/*.html',
-    'app/images/*.*',
+    'app/images/**/*.*',
+    '!app/images/src/**/*.*',
+    '!app/images/symbol/*.*',
     '!app/images/*.svg',
     'app/images/sprite.svg',
     'app/fonts/*.*',
