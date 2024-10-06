@@ -1,0 +1,109 @@
+.projects {
+    margin-top: -70px;
+    margin-bottom: 75px;
+    &__inner {
+        padding: 160px 85px 0 50px;
+        background: url('../images/projects-bg.webp') no-repeat top/contain;
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+    &__slider {
+        margin-top: -90px;
+    }
+    &__slide {
+        padding-bottom: 12px;
+    }
+    &__slide-title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: right;
+        width: 440px;
+        margin-right: 120px;
+        margin-left: auto;
+    }
+    &__slide-inner {
+        @include flex;
+    }
+
+    &__slide-subtitle {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.188;
+        margin-top: 50px;
+    }
+    &__slide-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        width: 330px;
+        margin-top: 15px;
+    }
+    &__slide-info {
+        display: flex;
+        gap: 10px;
+        align-items: flex-end;
+    }
+    &__slide-item {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 20px;
+        background: rgb(60, 52, 46);
+        width: 120px;
+        padding: 18px 0;
+        text-align: center;
+        &:last-child{
+            height: 120px;
+            background-color: transparent;
+            background: url('../images/slideinfo-bg.webp') no-repeat;
+            padding: 0;
+            position: relative;
+            span{
+                position: absolute;
+                bottom: 18px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &__slide-image {
+        margin-top: 50px;
+    }
+    &__slide-btn{
+        background-color: #8F7E70;
+        width: 68px;
+        height: 40px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: auto;
+        bottom: 4px;
+        &::after{
+            display: none;
+        }
+        svg{
+            width: 20px;
+        }
+    }
+}
+sup{
+    vertical-align: super;
+    font-size: 12px;
+}
+
+.swiper-button-prev{
+    left: 385px;
+    transform: rotate(-2deg);
+}
+.swiper-button-next{
+    right: 0px;
+    transform: rotate(2deg);
+}
+
+
